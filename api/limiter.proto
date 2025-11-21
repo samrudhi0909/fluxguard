@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package limiter;
+
+option go_package = "./api"; // This tells it to generate code in the current folder
+
+service RateLimiter {
+  rpc ShouldAllow (Request) returns (Response);
+}
+
+message Request {
+  string user_id = 1;
+  int32 capacity = 2;
+  int32 refill_rate = 3;
+}
+
+message Response {
+  bool allowed = 1;
+}
