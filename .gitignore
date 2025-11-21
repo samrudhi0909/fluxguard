@@ -1,0 +1,19 @@
+# Binaries
+/bin/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binaries
+*.test
+
+# Vendor folder (if we use it later)
+vendor/
+
+# Project specific
+fluxguard
+
+# OS Specific
+.DS_Store
